@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 #nullable enable
 
@@ -27,7 +28,9 @@ public class GameManagement : MonoBehaviour
         if(float.TryParse(Distance, out float value))
         if(ToPosition!=null)
         if(FromPosition!=null)
-            ToPosition.position = FromPosition.position + new Vector3(value * 2, 0, 0);
+            ToPosition.localPosition = 
+                FromPosition.position + 
+                new Vector3(0, value * 100, 0);
     }
 
 
